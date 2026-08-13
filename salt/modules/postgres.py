@@ -361,7 +361,7 @@ def _connection_defaults(user=None, host=None, port=None, maintenance_db=None):
         )
     if not host:
         host = __salt__["config.option"](
-            "postgres.user", default=__salt__["config.get"]("postgres:host")
+            "postgres.host", default=__salt__["config.get"]("postgres:host")
         )
     if not port:
         port = __salt__["config.option"](
